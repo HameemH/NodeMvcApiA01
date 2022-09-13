@@ -37,7 +37,7 @@ app.use(express.json());
 //    })
 // }) 
 
-app.use('/api/users/random',usersroute)
+app.use('/api/users/',usersroute)
  
 app.listen(port, () => {
     console.log(`App listening on port ${port}`)

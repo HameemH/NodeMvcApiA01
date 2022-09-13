@@ -33,7 +33,11 @@ let data = [
     module.exports.getrandomUser =(req,res)=>{
         const random = Math.floor(Math.random() * data.length);
         res.send(data[random])
-        res.send('wait')
+    
+     }
+    module.exports.getAllUser =(req,res)=>{
+        
+        res.send(data)
     
      }
     
