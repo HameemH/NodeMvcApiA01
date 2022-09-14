@@ -40,4 +40,10 @@ let data = [
         res.send(data)
     
      }
+     module.exports.addAUser =(req,res)=>{ 
+        const newData = req.body;
+       const newArr =  data.push(newData)
+      console.log(data);
+       res.send(data)
+     }
     
