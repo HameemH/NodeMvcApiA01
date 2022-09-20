@@ -47,11 +47,17 @@ let data = [
        res.send(data)
      }
      module.exports.removeAUser =(req,res)=>{   
-        const {id} = req.query;
         console.log(id)
         const findUser = data.filter(datum => datum.id !== id);
         console.log(findUser);
    
+        res.send(findUser);
+     }
+     module.exports.updateAUser = (req,res)=>{
+        const {id} = req.query;
+        const body = req.body;
+        let findUser = data.find(datum => datum.id === id);
+        findUser = body
         res.send(findUser);
      }
     
